@@ -22,7 +22,8 @@ export default function Login() {
       formData.append('username', email);
       formData.append('password', password);
 
-      const response = await fetch('http://localhost:8080/api/v1/auth/login', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${API_URL}/api/v1/auth/login`, {
         method: 'POST',
         body: formData,
       });

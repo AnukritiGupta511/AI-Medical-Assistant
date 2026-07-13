@@ -8,9 +8,18 @@ class Settings(BaseSettings):
     POSTGRES_USER: str = "medical_user"
     POSTGRES_PASSWORD: str = "medical_password"
     POSTGRES_DB: str = "medical_db"
-    # Fallback to local SQLite if Postgres isn't running
+    
+    # Vercel sets POSTGRES_URL automatically if using Vercel Postgres
+    POSTGRES_URL: str = ""
     DATABASE_URL: str = "sqlite:///./medical_assistant.db"
     
+    @property
+    def active_database_url(self) -> str:
+        # Vercel provides postgres:// but SQLAlchemy requires postgresql://
+        if self.POSTGRES_URL:
+            return self.POSTGRES_URL.replace("postgres://", "postgresql://")
+        return self.DATABASE_URL
+        
     REDIS_URL: str = "redis://localhost:6379/0"
     
     CHROMA_HOST: str = "chromadb"

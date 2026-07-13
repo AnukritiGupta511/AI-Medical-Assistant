@@ -47,7 +47,7 @@ export default function Register() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="flex justify-center text-primary-600 mb-6">
+        <div className="flex justify-center text-blue-600 mb-6">
           <Activity className="h-12 w-12" />
         </div>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-900">
@@ -55,7 +55,7 @@ export default function Register() {
         </h2>
         <p className="mt-2 text-center text-sm text-slate-600">
           Or{' '}
-          <Link to="/login" className="font-medium text-primary-600 hover:text-primary-500 transition-colors">
+          <Link to="/login" className="font-medium text-blue-600 hover:text-blue-500 transition-colors">
             sign in to your existing account
           </Link>
         </p>
@@ -81,7 +81,7 @@ export default function Register() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 sm:text-sm border-slate-300 rounded-lg py-2.5 border"
+                  className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-slate-300 rounded-lg py-2.5 border"
                   placeholder="you@example.com"
                 />
               </div>
@@ -98,7 +98,7 @@ export default function Register() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 sm:text-sm border-slate-300 rounded-lg py-2.5 border"
+                  className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-slate-300 rounded-lg py-2.5 border"
                   placeholder="••••••••"
                 />
               </div>

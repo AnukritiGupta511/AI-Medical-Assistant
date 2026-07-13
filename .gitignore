@@ -54,3 +54,4 @@ temp_uploads/
 .DS_Store
 
 .vercel
+.env*

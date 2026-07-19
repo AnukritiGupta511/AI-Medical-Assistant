@@ -55,3 +55,4 @@ temp_uploads/
 
 .vercel
 .env*
+.streamlit/secrets.toml
